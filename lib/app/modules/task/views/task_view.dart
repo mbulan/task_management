@@ -15,7 +15,10 @@ class TaskView extends GetView<TaskController> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawerKey,
-      drawer: const SideBar(),
+      drawer: const SizedBox(
+        width: 150,
+        child: SideBar(),
+      ),
       backgroundColor: AppColors.primaryBg,
       body: Row(children: [
         !context.isPhone
@@ -116,9 +119,9 @@ class TaskView extends GetView<TaskController> {
                           itemBuilder: (context, index) {
                             return Container(
                               //  width: 400,
-                              height: 200,
+                              height: 160,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(25),
                                 color: AppColors.cardBg,
                               ),
                               margin: EdgeInsets.all(10),
